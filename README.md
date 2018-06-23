@@ -50,13 +50,21 @@ NOTA: la rama que se crea aqui de manera local no sera visible en github o el se
 Comando basicos: 
 
 visualizar cambios pendientes: git status 
+
 visualizar los comits realizados en consola: git log 
+
 preprara todos archivos para commit: git add . 
+
 preparar un archivo para commit: git add RUTA_DEL_ARCHIVO
+
 quitar todos archivos para commit: git rm . 
+
 quitar un archivo para commit: git rm RUTA_DEL_ARCHIVO
+
 agregar comenatios a commit: git commit -m "texto que quiera colocar en el commit"
+
 enviar cambios a repositorio remoto: git push NOMBRE_DEL_REMOTO RAMA_LOCAL_O_REMOTA
+
 NOTA: no es necesario el nombre de repositorio remoto pero cuando la rama no existe en en el repositorio remoto y solo de manera local se debe de colocar, git push por si solo de manara automatica subira el cambio al reopisotio remoto
 
 
