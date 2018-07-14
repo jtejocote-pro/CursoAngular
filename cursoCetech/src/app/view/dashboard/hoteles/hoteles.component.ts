@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-hoteles',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HotelesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private navegator:Router) { }
 
   ngOnInit() {
+  } 
+
+  /* Accion de navegacion*/
+  btnAction()
+  {
+    console.log('Estoy en hoteles component y voy a navegar!');
+    this.navegator.navigate(['clientesRegistro']);
   }
 
 }
