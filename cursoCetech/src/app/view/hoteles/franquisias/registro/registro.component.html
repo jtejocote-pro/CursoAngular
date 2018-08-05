@@ -1,3 +1,24 @@
-<p>
-  registro works!
-</p>
+<form [formGroup]="registroHotelFormGroup">
+  <div>
+    <label>Nombre Del Hotel</label>
+    <input type="text" formControlName="hotelsNameForm">
+  </div>
+  <div>
+    <label>Telefono Del Hotel</label>
+    <input type="text" formControlName="phoneNumberForm">
+  </div>
+  <div>
+    <label>Correo Del Hotel</label>
+    <input type="text" formControlName="mailForm">
+  </div>
+
+  <div>
+    <button (click)="print()">Imprime mi formularion</button>
+  </div>
+</form>
+
+<div>
+  <span>
+    {{textoDevariables}}
+  </span>
+</div>
