@@ -4,6 +4,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { HotelesDasboardComponent } from './hoteles-dashboard/hoteles-dashboard.component';
 
 const route: Routes = [{
+  path:'',
+  component: HotelesDasboardComponent
+},{
   path: 'dashboard_hoteles',
   component: HotelesDasboardComponent
 }

@@ -7,11 +7,12 @@ import { DashboardModule } from './view/dashboard/dashboard.module';
 import { ClientesModule } from './view/clientes/clientes.module';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
 import { HotelesDasboardComponent } from './view/dashboard/hoteles-dashboard/hoteles-dashboard.component';
+import { HotelesModule } from './view/hoteles/hoteles.module';
 
 const route: Routes = [
   {
     path: '',
-    component: HotelesDasboardComponent
+    loadChildren: './view/dashboard/dashboard.module#DashboardModule'
   },
   {
     path: 'dashboard_hoteles',
@@ -20,6 +21,10 @@ const route: Routes = [
   {
     path: 'clientesRegistro',
     loadChildren: './view/clientes/clientes.module#ClientesModule'
+  },
+  {
+    path: 'registroHotel',
+    loadChildren: './view/hoteles/hoteles.module#HotelesModule'
   }
 ];
 
@@ -32,7 +37,8 @@ const route: Routes = [
     RouterModule.forRoot(route),
     DashboardModule,
     ClientesModule,
-    HttpClientModule
+    HttpClientModule,
+    HotelesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

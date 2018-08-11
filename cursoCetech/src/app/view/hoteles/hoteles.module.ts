@@ -13,10 +13,23 @@ import { RegistroHabitacionComponent } from './control-habitaciones/registro-hab
 import { DetalleHabitacionComponent } from './control-habitaciones/detalle-habitacion/detalle-habitacion.component';
 import { RegistroEstacionamientoComponent } from './estacionamiento/registro-estacionamiento/registro-estacionamiento.component';
 import { DetalleEstacionamientoComponent } from './estacionamiento/detalle-estacionamiento/detalle-estacionamiento.component';
+import { Routes, RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+export const routesHotels: Routes = [
+  {
+    path: 'registroHotel',
+    component: RegistroComponent
+  }
+];
+
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forChild(routesHotels)
   ],
   declarations: [
     FranquisiasComponent, 

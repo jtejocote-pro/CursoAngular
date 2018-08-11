@@ -4,7 +4,7 @@ import {Router} from '@angular/router';
 @Component({
   selector: 'app-hoteles-dashboard',
   templateUrl: './hoteles-dashboard.component.html',
-  styleUrls: ['./hoteles-dashboard  .component.css']
+  styleUrls: ['./hoteles-dashboard.component.css']
 })
 export class HotelesDasboardComponent implements OnInit {
 
