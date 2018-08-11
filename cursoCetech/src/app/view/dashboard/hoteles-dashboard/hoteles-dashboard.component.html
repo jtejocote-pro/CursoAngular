@@ -1,1 +1,20 @@
-<button (click)="btnAction()">Voy a navegar</button>
+<form [formGroup]="registroHotelFormGroup">
+    <div>
+        <label>Nombre Del Hotel</label>
+        <input id="name" class="form-control" type="text" formControlName="hotelsNameForm" required>
+        <div *ngIf="!registroHotelFormGroup.controls.hotelsNameForm.valid" class="alert alert-danger">
+            {{error}}
+        </div>
+    </div>
+    <div>
+        <label>Correo Del Hotel</label>
+        <input type="text" formControlName="mailForm">
+    </div>
+
+    <div>
+        <button (click)="btnAction()">Voy a navegar {{nombre}}</button>
+        <button (click)="btnActionSinParamsInURL()">Voy a navegar sin datos</button>
+        <button (click)="validarCampos()">Validar Formulario</button>
+
+    </div>
+</form>
