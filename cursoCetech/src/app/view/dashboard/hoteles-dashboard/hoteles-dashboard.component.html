@@ -10,11 +10,30 @@
         <label>Correo Del Hotel</label>
         <input type="text" formControlName="mailForm">
     </div>
+    <div>
+        <label>Select User</label>
+        <select formControlName="idUserForm" (change)="mostrarTitleAndText()">
+            <option *ngFor="let usuario of userListInfo" [value]="usuario.id" >
+                {{usuario.userId}}
+            </option>
+        </select>
+    </div>
 
+    <div *ngIf="show">
+        <label>Select User</label>
+        <select formControlName="idBBVAForm">
+            <option *ngFor="let item of BBVAcatalogue" [value]="item.cidlabel" >
+                {{item.tlabel}}
+            </option>
+        </select>
+    </div>
     <div>
         <button (click)="btnAction()">Voy a navegar {{nombre}}</button>
         <button (click)="btnActionSinParamsInURL()">Voy a navegar sin datos</button>
         <button (click)="validarCampos()">Validar Formulario</button>
-
+        <button (click)="cargar('en')">Cargar Catalogue BBVA</button>
     </div>
+
+    <h1>{{title}}</h1>
+    <p>{{texto}}</p>
 </form>
