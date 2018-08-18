@@ -11,7 +11,7 @@ import { HotelesModule } from './view/hoteles/hoteles.module';
 
 const route: Routes = [
   {
-    path: '',
+    path: 'hola_dashboard',
     loadChildren: './view/dashboard/dashboard.module#DashboardModule'
   },
   {
